@@ -1,32 +1,73 @@
-export ZSH="/home/aogburn/.oh-my-zsh"
+// See https://hyper.is#cfg for all currently supported options.
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+module.exports = {
+  config: {
+    updateChannel: 'stable',
 
-# Plugins
-plugins=(
-  git
-)
+    fontSize: 15,
+    fontFamily: '"Droid Sans Mono for Powerline", "DroidSansMono Nerd Font", "BlexMono Nerd Font Mono", "MesloLGLDZ Nerd Font", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontWeight: 'normal',
+    fontWeightBold: 'bold',
 
-source $ZSH/oh-my-zsh.sh
+    cursorColor: 'rgba(248,28,229,0.8)',
+    cursorAccentColor: '#000',
+    cursorShape: 'BLOCK',
+    cursorBlink: false,
 
-alias la="ls -a"
-alias ls="colorls"
-alias tf=terraform
-alias b64="base64_encode"
+    foregroundColor: '#fff',
+    backgroundColor: '#000',
+    selectionColor: 'rgba(248,28,229,0.3)',
+    borderColor: '#C839C5',
+    css: '',
+    termCSS: '',
 
-function base64_encode() {
-  node -e "console.log(Buffer.from('$1').toString('base64'))"
-}
+    showHamburgerMenu: false,
+    showWindowControls: false,
+    padding: '12px 14px',
 
-#POWERLEVEL9K_MODE='nerdfont-complete'
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(icons_test)
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
+    colors: {
+      black: '#000000',
+      red: '#C51E14',
+      green: '#1DC121',
+      yellow: '#C7C329',
+      blue: '#0A2FC4',
+      magenta: '#C839C5',
+      cyan: '#20C5C6',
+      white: '#C7C7C7',
+      lightBlack: '#686868',
+      lightRed: '#FD6F6B',
+      lightGreen: '#67F86F',
+      lightYellow: '#FFFA72',
+      lightBlue: '#6A76FB',
+      lightMagenta: '#FD7CFC',
+      lightCyan: '#68FDFE',
+      lightWhite: '#FFFFFF',
+    },
 
-POWERLEVEL9K_VCS_GIT_ICON=$' '
-POWERLEVEL9K_VCS_GIT_GITHUB_ICON='\uf113 '
-POWERLEVEL9K_VCS_GIT_GITLAB_ICON='\uf296 '
-POWERLEVEL9K_VCS_STAGED_ICON=$'\uf055 '
-POWERLEVEL9K_VCS_UNSTAGED_ICON=$'\uf421 '
-POWERLEVEL9K_VCS_UNTRACKED_ICON=$'\uf00d '
-POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=$'\uf0ab '
-POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa '
+    MaterialTheme: {
+        theme: '',
+        backgroundOpacity: '1',
+        accentColor: '#64FFDA',
+        vibrancy: 'dark'
+    },
+
+    shell: '',
+    shellArgs: ['--login'],
+    env: {},
+    bell: 'SOUND',
+    copyOnSelect: false,
+    defaultSSHApp: true,
+  },
+
+  plugins: [
+    "gitrocket", 
+    "hyper-material-theme", 
+    "hyperpower", 
+    "hyper-search", 
+    "hyper-statusline",
+    "hyper-tabs-enhanced"
+  ],
+  localPlugins: [],
+
+  keymaps: { },
+};
