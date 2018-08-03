@@ -1,4 +1,4 @@
-export ZSH="/home/aogburn/.oh-my-zsh"
+export ZSH="/home/andrew/.oh-my-zsh"
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
@@ -18,7 +18,7 @@ function base64_encode() {
   node -e "console.log(Buffer.from('$1').toString('base64'))"
 }
 
-POWERLEVEL9K_MODE='nerdfont-complete'
+#POWERLEVEL9K_MODE='nerdfont-complete'
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(icons_test)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
 
