@@ -20,3 +20,5 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 gem install colorls
 
 sudo -H pip install powerline-status
+
+
