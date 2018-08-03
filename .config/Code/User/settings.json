@@ -1,0 +1,29 @@
+{
+  "editor.tabSize": 2,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": true,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "explorer.confirmDragAndDrop": false,
+  "git.autofetch": true,
+  "python.disablePromptForFeatures": [
+    "pylint"
+  ],
+  "git.confirmSync": false,
+  "vsicons.projectDetection.disableDetect": true,
+  "git.enableSmartCommit": true,
+  "gitlens.keymap": "alternate",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.fontFamily": "'MesloLGLDZ Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.iconTheme": "vscode-icons",
+  "gitlens.historyExplorer.enabled": true,
+}

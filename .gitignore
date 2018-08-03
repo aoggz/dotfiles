@@ -6,5 +6,6 @@
 
 !.hyper.js
 !.zshrc
+!.config/Code/User/settings.json
 
 !install.sh
