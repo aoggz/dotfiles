@@ -4,7 +4,7 @@
 apt update
 apt upgrade
 
-sudo apt install curl zsh ruby-full powerline python-pip
+sudo apt install curl zsh ruby-full powerline fonts-powerline python-pip
 curl https://releases.hyper.is/download/deb
 
 # Set zsh as default shell
@@ -17,6 +17,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 ln -s ~/repos/dotfiles/.hyper.js ~/.hyper.js
 ln -s ~/repos/dotfiles/.config/Code/User/settings.json ~/.config/Code/User/settings.json
+ln -s ~/repos/dotfiles/.config/fontconfig/conf.d  ~/.config/fontconfig/conf.d
 
 rm .zshrc
 ln -s ~/repos/dotfiles/.zshrc ~/.zshrc
@@ -26,4 +27,11 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 
 sudo gem install colorls
 
+# Go to https://github.com/ryanoasis/nerd-fonts
+# Download .ttf's from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode/Regular/complete
+# Download .ttf's from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DroidSansMono/complete
+# Copy to ~/.local/share/fonts/
+
 sudo -H pip install powerline-status
+
+sudo fc-cache -fv
