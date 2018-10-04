@@ -4,7 +4,7 @@
 apt update
 apt upgrade
 
-sudo apt install curl zsh ruby-full powerline fonts-powerline python-pip
+sudo apt install curl zsh ruby-full powerline fonts-powerline python-pip default-jdk gradle
 curl https://releases.hyper.is/download/deb
 
 # Set zsh as default shell
@@ -35,3 +35,19 @@ sudo gem install colorls
 sudo -H pip install powerline-status
 
 sudo fc-cache -fv
+
+# Configure .npmrc file
+#@zoll:registry=https://zoll-lifevest.myget.org/F/zoll-npm-packages/npm/
+#//zoll-lifevest.myget.org/F/zoll-npm-packages/npm/:_authToken=GUID_HERE
+
+code --install-extension ms-vscode.csharp
+code --install-extension peterjausovec.vscode-docker
+code --install-extension eamodio.gitlens
+code --install-extension ms-vscode.go
+code --install-extension davidanson.vscode-markdownlint
+code --install-extension pkief.material-icon-theme
+code --install-extension esbenp.prettier-vscode
+code --install-extension alefragnani.project-manager
+code --install-extension redhat.vscode-yaml
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension mauve.terraform

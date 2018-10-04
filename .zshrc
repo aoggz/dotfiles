@@ -1,4 +1,7 @@
 export ZSH="/home/aogburn/.oh-my-zsh"
+export PATH=~/.local/bin:$PATH
+export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
+export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
@@ -30,3 +33,10 @@ POWERLEVEL9K_VCS_UNSTAGED_ICON=$'\uf421 '
 POWERLEVEL9K_VCS_UNTRACKED_ICON=$'\uf00d '
 POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=$'\uf0ab '
 POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa '
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/sls.zsh ]] && . /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/sls.zsh

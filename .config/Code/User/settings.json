@@ -14,9 +14,7 @@
   },
   "explorer.confirmDragAndDrop": false,
   "git.autofetch": true,
-  "python.disablePromptForFeatures": [
-    "pylint"
-  ],
+  "python.disablePromptForFeatures": ["pylint"],
   "git.confirmSync": false,
   "vsicons.projectDetection.disableDetect": true,
   "git.enableSmartCommit": true,
@@ -24,6 +22,7 @@
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.fontFamily": "'MesloLGLDZ Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
   "vsicons.dontShowNewVersionMessage": true,
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "gitlens.historyExplorer.enabled": true,
+  "prettier.eslintIntegration": true
 }

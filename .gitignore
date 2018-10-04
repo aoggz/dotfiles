@@ -7,5 +7,6 @@
 !.hyper.js
 !.zshrc
 !.config/Code/User/settings.json
+!.config/fontconfig/conf.d
 
 !install.sh
