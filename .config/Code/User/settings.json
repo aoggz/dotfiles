@@ -20,9 +20,11 @@
   "git.enableSmartCommit": true,
   "gitlens.keymap": "alternate",
   "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontFamily": "'MesloLGLDZ Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
+  "terminal.integrated.fontFamily": "'DroidSansMono Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "material-icon-theme",
   "gitlens.historyExplorer.enabled": true,
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "powermode.enabled": true,
+  "powermode.enableShake": false,
 }
