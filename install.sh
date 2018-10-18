@@ -1,10 +1,13 @@
 # Setup SSH keys
 # Clone this repository
 
+wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+
 apt update
 apt upgrade
 
-sudo apt install curl zsh ruby-full powerline fonts-powerline python-pip default-jdk gradle
+sudo apt install curl zsh ruby-full powerline fonts-powerline python-pip default-jdk gradle apt-transport-https dotnet-sdk-2.1
 curl https://releases.hyper.is/download/deb
 
 # Set zsh as default shell
@@ -51,3 +54,4 @@ code --install-extension alefragnani.project-manager
 code --install-extension redhat.vscode-yaml
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension mauve.terraform
+code --install-extension ms-mssql.mssql
