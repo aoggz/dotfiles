@@ -1,7 +1,9 @@
 export ZSH="/home/aogburn/.oh-my-zsh"
 export PATH=~/.local/bin:$PATH
+export PATH=$PATH:/usr/local/go/bin
 export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
 export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
+export DEPLOY_ENVIRONMENT=aogburn
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
