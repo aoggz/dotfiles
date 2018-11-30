@@ -3,6 +3,7 @@
 !README.md
 
 !.gitignore
+!.gitconfig
 
 !.hyper.js
 !.zshrc
