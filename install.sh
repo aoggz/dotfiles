@@ -1,18 +1,3 @@
-# 1. Install the following GNOME extensions:
-#    - Battery Percentage (https://extensions.gnome.org/extension/1191/battery-percentage/)
-#    - Dash to Dock (https://extensions.gnome.org/extension/307/dash-to-dock/)
-#    - Panel Date Format (https://extensions.gnome.org/extension/1462/panel-date-format/)
-#    - Unite (https://extensions.gnome.org/extension/1287/unite/)
-# Install VS Code ()
-# 2. Setup SSH keys
-# 3. Clone this repository
-# 4. Install nerd-fonts:
-#    a. Go to https://github.com/ryanoasis/nerd-fonts
-#    b. Download .ttf's from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode/Regular/complete
-#    c. Download .ttf's from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/DroidSansMono/complete
-#    d. Copy to ~/.local/share/fonts
-
-
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
@@ -62,4 +47,3 @@ ln -s ~/repos/dotfiles/.config/Code/User/settings.json ~/.config/Code/User/setti
 dconf write /org/gnome/shell/extensions/panel-date-format/format "'%a  %b  %d   %l:%M %p'"
 
 pip install awscli --upgrade --user
-
