@@ -14,14 +14,15 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+alias d="docker"
+alias g="git"
+alias h="history"
 alias la="ls -a"
-alias ls="colorls"
+alias ls=colorls
 alias tf=terraform
-alias b64="base64_encode"
-
-function base64_encode() {
-  node -e "console.log(Buffer.from('$1').toString('base64'))"
-}
+alias b64=base64
+alias docker-rma='docker rm $(docker ps -a -q)'
+alias docker-rmai='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 
 POWERLEVEL9K_MODE='nerdfont-complete'
 #POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(icons_test)
