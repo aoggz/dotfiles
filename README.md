@@ -7,7 +7,7 @@
     - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
     - [Panel Date Format](https://extensions.gnome.org/extension/1462/panel-date-format/)
     - [Unite](https://extensions.gnome.org/extension/1287/unite/)
-1. Install VS Code ()
+1. Install [VS Code](https://code.visualstudio.com/docs/?dv=linux64_deb)
 1. Install nerd-fonts:
     1. Go to https://github.com/ryanoasis/nerd-fonts
     1. Download .ttf's from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/FiraCode/Regular/complete
