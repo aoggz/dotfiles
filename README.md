@@ -16,3 +16,5 @@
 1. Setup SSH keys
 1. Clone this repository
 1. Run `./install.sh`.
+1. [Optional] Run `nvm install --lts` to install the latest LTS version of node.
+1. [Optional] Run `nvm install-latest-npm` to update npm to the latest for the current node.js version.

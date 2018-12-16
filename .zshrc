@@ -5,12 +5,15 @@ export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
 export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
 export DEPLOY_ENVIRONMENT=aogburn
 
+# nvm config
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Plugins
-plugins=(
-  git
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 

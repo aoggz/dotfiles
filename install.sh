@@ -48,5 +48,5 @@ dconf write /org/gnome/shell/extensions/panel-date-format/format "'%a  %b  %d   
 
 pip install awscli --upgrade --user
 
-# Install node.js
-sudo snap install node --classic --channel=8
+# Install nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
