@@ -47,3 +47,7 @@ ln -s ~/repos/dotfiles/.config/Code/User/settings.json ~/.config/Code/User/setti
 dconf write /org/gnome/shell/extensions/panel-date-format/format "'%a  %b  %d   %l:%M %p'"
 
 pip install awscli --upgrade --user
+
+# Install node.js
+curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
+sudo apt-get install -y nodejs
