@@ -1,6 +1,8 @@
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
+sudo add-apt-repository ppa:system76/pop
+
 sudo apt update
 sudo apt upgrade
 
@@ -17,7 +19,8 @@ sudo apt install \
   dotnet-sdk-2.1 \
   redshift \
   redshift-gtk \
-  xfce4-notifyd 
+  xfce4-notifyd \
+  pop-icon-theme
   
 # Enable GNOME-like notifications
 # https://askubuntu.com/questions/101606/clickable-gnome-style-notifications-in-unity

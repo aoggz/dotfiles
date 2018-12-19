@@ -2,11 +2,6 @@
 
 ## Installation
 
-1. Install the following GNOME extensions:
-    - [Battery Percentage](https://extensions.gnome.org/extension/1191/battery-percentage/)
-    - [Dash to Dock](https://extensions.gnome.org/extension/307/dash-to-dock/)
-    - [Panel Date Format](https://extensions.gnome.org/extension/1462/panel-date-format/)
-    - [Unite](https://extensions.gnome.org/extension/1287/unite/)
 1. Install [VS Code](https://code.visualstudio.com/docs/?dv=linux64_deb)
 1. Install nerd-fonts:
     1. Go to https://github.com/ryanoasis/nerd-fonts
