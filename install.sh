@@ -24,7 +24,6 @@ sudo apt install \
 sudo apt purge notify-osd\
 
 killall -v notify-osd
-xfce4-notifyd-config
 
 # Terminal configuration
 chsh -s /usr/bin/zsh aogburn
