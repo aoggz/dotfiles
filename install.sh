@@ -1,8 +1,8 @@
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
-apt update
-apt upgrade
+sudo apt update
+sudo apt upgrade
 
 sudo apt install \
   curl \
@@ -16,7 +16,15 @@ sudo apt install \
   apt-transport-https \
   dotnet-sdk-2.1 \
   redshift \
-  redshift-gtk
+  redshift-gtk \
+  xfce4-notifyd 
+  
+# Enable GNOME-like notifications
+# https://askubuntu.com/questions/101606/clickable-gnome-style-notifications-in-unity
+sudo apt purge notify-osd\
+
+killall -v notify-osd
+xfce4-notifyd-config
 
 # Terminal configuration
 chsh -s /usr/bin/zsh aogburn
@@ -54,9 +62,6 @@ code --install-extension ms-mssql.mssql
 
 rm ~/.config/Code/User/settings.json
 ln -s ~/repos/dotfiles/.config/Code/User/settings.json ~/.config/Code/User/settings.json
-
-# Customize datetime format in shell bar
-dconf write /org/gnome/shell/extensions/panel-date-format/format "'%a  %b  %d   %l:%M %p'"
 
 pip install awscli --upgrade --user
 
