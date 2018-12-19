@@ -4,7 +4,19 @@ sudo dpkg -i packages-microsoft-prod.deb
 apt update
 apt upgrade
 
-sudo apt install curl chrome-gnome-shell zsh ruby-full powerline fonts-powerline python-pip default-jdk gradle apt-transport-https dotnet-sdk-2.1
+sudo apt install \
+  curl \
+  zsh \
+  ruby-full \
+  powerline \
+  fonts-powerline \
+  python-pip \
+  default-jdk \
+  gradle \
+  apt-transport-https \
+  dotnet-sdk-2.1 \
+  redshift \
+  redshift-gtk
 
 # Terminal configuration
 chsh -s /usr/bin/zsh aogburn
