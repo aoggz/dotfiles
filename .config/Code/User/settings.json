@@ -30,4 +30,7 @@
   "liveshare.audio.startCallOnShare": true,
   "workbench.activityBar.visible": true,
   "window.zoomLevel": 0,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "window.titleBarStyle": "native",
 }
