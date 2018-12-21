@@ -69,3 +69,7 @@ pip install awscli --upgrade --user
 
 # Install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+# Increase watchers available for IDEs
+sudo echo "fs.inotify.max_user_watches = 524288" > /etc/sysctl.d/ide.conf
+sudo sysctl -p --system 
