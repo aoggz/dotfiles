@@ -73,3 +73,15 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | 
 # Increase watchers available for IDEs
 sudo echo "fs.inotify.max_user_watches = 524288" > /etc/sysctl.d/ide.conf
 sudo sysctl -p --system 
+
+# Install Spotify
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update
+sudo apt-get install spotify-client
+
+mkdir ~/.spotify
+curl https://community.spotify.com/spotify/attachments/spotify/desktop_linux/296/1/spotify_control.zip --output ~/.spotify/spotify_control.zip
+unzip ~/.spotify/spotify_control.zip -d ~/.spotify/
+chmod a+x ~/.spotify/spotify_control
+rm ~/.spotify/spotify_control.zip
