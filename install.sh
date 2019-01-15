@@ -39,6 +39,8 @@ ln -s ~/repos/dotfiles/.config/fontconfig/conf.d  ~/.config/fontconfig/conf.d
 rm ~/.zshrc
 ln -s ~/repos/dotfiles/.zshrc
 
+ln -s ~/repos/dotfiles/.config/redshift.conf  ~/.config/redshift.conf
+
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
 sudo gem install colorls
