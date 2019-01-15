@@ -9,5 +9,6 @@
 !.zshrc
 !.config/Code/User/settings.json
 !.config/fontconfig/conf.d
+!.config/redshift.conf
 
 !install.sh
