@@ -1,8 +1,7 @@
+
 export ZSH="/home/aogburn/.oh-my-zsh"
 export PATH=~/.local/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
-export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
-export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
 export DEPLOY_ENVIRONMENT=aogburn
 
 # nvm config
@@ -46,3 +45,25 @@ POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa '
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/sls.zsh ]] && . /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/sls.zsh
+
+aws() {
+  docker run --rm -it \
+    --name aws \
+    --log-driver none \
+    -v "${HOME}/.aws:/root/.aws" \
+    jess/awscli "$@"
+}
+
+export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
+export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
+
+runway() {
+  docker run --rm -it \
+    --name runway \
+    --log-driver none \
+    -e DEPLOY_ENVIRONMENT \
+    -v "${HOME}/.aws:/root/.aws" \
+    -v "${PWD}:/app" \
+    -w /app \
+    anozaki/runway runway "$@"
+}

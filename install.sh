@@ -12,6 +12,7 @@ sudo apt install \
   ruby-full \
   powerline \
   fonts-powerline \
+  python2.7 \
   python-pip \
   default-jdk \
   gradle \
@@ -20,7 +21,12 @@ sudo apt install \
   redshift \
   redshift-gtk \
   xfce4-notifyd \
-  pop-icon-theme
+  pop-icon-theme \
+  libpangox-1.0-0 \
+  libcanberra-gtk-module \
+  ca-certificates \
+  gnupg2 \
+  software-properties-common
   
 # Enable GNOME-like notifications
 # https://askubuntu.com/questions/101606/clickable-gnome-style-notifications-in-unity
@@ -36,7 +42,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ln -s ~/repos/dotfiles/.hyper.js ~/.hyper.js
 ln -s ~/repos/dotfiles/.config/fontconfig/conf.d  ~/.config/fontconfig/conf.d
 
-rm ~/.zshrc
+rm -f ~/.zshrc
 ln -s ~/repos/dotfiles/.zshrc
 
 ln -s ~/repos/dotfiles/.config/redshift.conf  ~/.config/redshift.conf
@@ -69,6 +75,24 @@ ln -s ~/repos/dotfiles/.config/Code/User/settings.json ~/.config/Code/User/setti
 
 pip install awscli --upgrade --user
 
+# Install docker - https://docs.docker.com/install/linux/docker-ce/ubuntu/
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update
+sudo apt-get install docker-ce
+
+# Docker post-install steps: https://docs.docker.com/install/linux/linux-postinstall/
+
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
+
 # Install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
@@ -87,3 +111,13 @@ curl https://community.spotify.com/spotify/attachments/spotify/desktop_linux/296
 unzip ~/.spotify/spotify_control.zip -d ~/.spotify/
 chmod a+x ~/.spotify/spotify_control
 rm ~/.spotify/spotify_control.zip
+
+# Install snaps
+snap install slack --classic
+snap install hiri
+snap install pulseaudio
+
+# Move launcher to the bottom of the screen
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+sudo apt install pavucontrol
