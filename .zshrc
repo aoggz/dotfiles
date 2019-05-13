@@ -2,6 +2,7 @@
 export ZSH="/home/aogburn/.oh-my-zsh"
 export PATH=~/.local/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
+export GOPATH=~/go
 export DEPLOY_ENVIRONMENT=aogburn
 
 # nvm config
@@ -10,6 +11,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# https://github.com/denysdovhan/spaceship-prompt
+# ZSH_THEME="spaceship"
 
 # Plugins
 plugins=(git)
@@ -46,24 +50,49 @@ POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa '
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/sls.zsh ]] && . /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/sls.zsh
 
-aws() {
-  docker run --rm -it \
-    --name aws \
-    --log-driver none \
-    -v "${HOME}/.aws:/root/.aws" \
-    jess/awscli "$@"
-}
+# aws() {
+#   docker run --rm -it \
+#     --name aws \
+#     --log-driver none \
+#     -v "${HOME}/.aws:/root/.aws" \
+#     jess/awscli "$@"
+# }
 
 export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
 export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
+export AWS_DEFAULT_REGION=`aws configure get default.region`
 
-runway() {
+# runway() {
+#   docker run --rm -it \
+#     --name runway \
+#     --log-driver none \
+#     -e DEPLOY_ENVIRONMENT \
+#     -v "${HOME}/.aws:/root/.aws" \
+#     -v "${PWD}:/app" \
+#     -w /app \
+#     anozaki/runway runway "$@"
+# }
+
+packer() {
   docker run --rm -it \
-    --name runway \
+    --name packer \
     --log-driver none \
     -e DEPLOY_ENVIRONMENT \
     -v "${HOME}/.aws:/root/.aws" \
     -v "${PWD}:/app" \
     -w /app \
-    anozaki/runway runway "$@"
+    hashicorp/packer "$@"
 }
+
+gitversion() {
+  docker run --rm -it \
+    --name gitversion \
+    --log-driver none \
+    -v "${PWD}:/repo" \
+    gittools/gitversion:5.0.0-linux-netcoreapp2.1 /repo "$@"
+}
+# fpath=($fpath "/home/aogburn/.zfunctions")
+
+#   # Set Spaceship ZSH as a prompt
+#   autoload -U promptinit; promptinit
+#   prompt spaceship
