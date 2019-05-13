@@ -1,4 +1,4 @@
-wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
 sudo add-apt-repository ppa:system76/pop
@@ -8,6 +8,7 @@ sudo apt upgrade
 
 sudo apt install \
   curl \
+  jq \
   zsh \
   ruby-full \
   powerline \
@@ -17,22 +18,21 @@ sudo apt install \
   default-jdk \
   gradle \
   apt-transport-https \
-  dotnet-sdk-2.1 \
+  dotnet-sdk-2.2 \
   redshift \
   redshift-gtk \
-  xfce4-notifyd \
   pop-icon-theme \
   libpangox-1.0-0 \
   libcanberra-gtk-module \
   ca-certificates \
   gnupg2 \
-  software-properties-common
-  
-# Enable GNOME-like notifications
-# https://askubuntu.com/questions/101606/clickable-gnome-style-notifications-in-unity
-sudo apt purge notify-osd\
+  software-properties-common \
+  python3-pip \
+  python3-tk \
+  python3-keyring \
+  chrome-gnome-shell
 
-killall -v notify-osd
+sudo chown -R $USER ~/.local
 
 # Terminal configuration
 chsh -s /usr/bin/zsh aogburn
@@ -69,11 +69,12 @@ code --install-extension redhat.vscode-yaml
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension mauve.terraform
 code --install-extension ms-mssql.mssql
+code --install-extension coenraads.bracket-pair-colorizer-2
 
 rm ~/.config/Code/User/settings.json
 ln -s ~/repos/dotfiles/.config/Code/User/settings.json ~/.config/Code/User/settings.json
 
-pip install awscli --upgrade --user
+pip install runway awscli --upgrade --user
 
 # Install docker - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -93,6 +94,11 @@ sudo usermod -aG docker $USER
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 sudo chmod g+rwx "$HOME/.docker" -R
 
+# Install docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo curl -L https://raw.githubusercontent.com/docker/compose/1.23.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+
 # Install nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
@@ -100,24 +106,10 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | 
 sudo echo "fs.inotify.max_user_watches = 524288" > /etc/sysctl.d/ide.conf
 sudo sysctl -p --system 
 
-# Install Spotify
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
-echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update
-sudo apt-get install spotify-client
-
-mkdir ~/.spotify
-curl https://community.spotify.com/spotify/attachments/spotify/desktop_linux/296/1/spotify_control.zip --output ~/.spotify/spotify_control.zip
-unzip ~/.spotify/spotify_control.zip -d ~/.spotify/
-chmod a+x ~/.spotify/spotify_control
-rm ~/.spotify/spotify_control.zip
-
 # Install snaps
 snap install slack --classic
 snap install hiri
 snap install pulseaudio
-
-# Move launcher to the bottom of the screen
-gsettings set com.canonical.Unity.Launcher launcher-position Bottom
-
-sudo apt install pavucontrol
+snap install postman
+snap install shellcheck
+snap install spotify
