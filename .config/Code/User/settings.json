@@ -1,15 +1,9 @@
 {
   "editor.tabSize": 2,
   "gitlens.advanced.messages": {
-    "suppressCommitHasNoPreviousCommitWarning": false,
-    "suppressCommitNotFoundWarning": false,
-    "suppressFileNotUnderSourceControlWarning": false,
-    "suppressGitVersionWarning": false,
-    "suppressLineUncommittedWarning": false,
-    "suppressNoRepositoryWarning": false,
+    "suppressLineUncommittedWarning": true,
     "suppressResultsExplorerNotice": true,
     "suppressShowKeyBindingsNotice": true,
-    "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
   },
   "explorer.confirmDragAndDrop": false,
@@ -19,8 +13,7 @@
   "vsicons.projectDetection.disableDetect": true,
   "git.enableSmartCommit": true,
   "gitlens.keymap": "alternate",
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.fontFamily": "'DroidSansMono Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
+  "terminal.integrated.fontFamily": "'FuraCode Nerd Font', 'DroidSansMono Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "material-icon-theme",
   "gitlens.historyExplorer.enabled": true,
@@ -33,4 +26,9 @@
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
   "window.titleBarStyle": "native",
+  "editor.fontFamily": "'FuraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "workbench.colorTheme": "Monokai"
 }
