@@ -17,7 +17,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.iconTheme": "material-icon-theme",
   "gitlens.historyExplorer.enabled": true,
-  "prettier.eslintIntegration": true,
   "powermode.enabled": true,
   "powermode.enableShake": false,
   "liveshare.audio.startCallOnShare": true,
