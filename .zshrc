@@ -96,3 +96,7 @@ gitversion() {
 #   # Set Spaceship ZSH as a prompt
 #   autoload -U promptinit; promptinit
 #   prompt spaceship
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/slss.zsh ]] && . /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/slss.zsh

@@ -28,7 +28,26 @@
   "window.titleBarStyle": "native",
   "editor.fontFamily": "'FuraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
   "editor.fontLigatures": true,
-  "workbench.colorTheme": "Monokai"
+  "workbench.colorTheme": "Monokai",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.minimap.enabled": false,
+  "explorer.confirmDelete": false,
+  "terraform.indexing": {
+    "enabled": true,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+  },
+  "terraform.languageServer": {
+    "enabled": false,
+    "args": []
+  }
 }

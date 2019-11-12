@@ -1,4 +1,4 @@
-wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb
+wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
 sudo add-apt-repository ppa:system76/pop
@@ -19,6 +19,7 @@ sudo apt install \
   gradle \
   apt-transport-https \
   dotnet-sdk-2.2 \
+  dotnet-sdk-3.0 \
   redshift \
   redshift-gtk \
   pop-icon-theme \
@@ -113,3 +114,6 @@ snap install pulseaudio
 snap install postman
 snap install shellcheck
 snap install spotify
+
+echo fs.inotify.max_user_watches=16384 | sudo tee -a /etc/sysctl.conf
+sudo sysctl -p
