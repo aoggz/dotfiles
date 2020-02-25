@@ -1,6 +1,8 @@
 wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+
 sudo add-apt-repository ppa:system76/pop
 
 sudo apt update
@@ -40,6 +42,7 @@ chsh -s /usr/bin/zsh aogburn
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+ln -s ~/repos/dotfiles/headphones.sh ~/.headphones.sh
 ln -s ~/repos/dotfiles/.hyper.js ~/.hyper.js
 ln -s ~/repos/dotfiles/.config/fontconfig/conf.d  ~/.config/fontconfig/conf.d
 

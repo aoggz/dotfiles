@@ -1,44 +1,31 @@
 {
-  "editor.tabSize": 2,
-  "gitlens.advanced.messages": {
-    "suppressLineUncommittedWarning": true,
-    "suppressResultsExplorerNotice": true,
-    "suppressShowKeyBindingsNotice": true,
-    "suppressWelcomeNotice": true
-  },
-  "explorer.confirmDragAndDrop": false,
-  "git.autofetch": true,
-  "python.disablePromptForFeatures": ["pylint"],
-  "git.confirmSync": false,
-  "vsicons.projectDetection.disableDetect": true,
-  "git.enableSmartCommit": true,
-  "gitlens.keymap": "alternate",
-  "terminal.integrated.fontFamily": "'FuraCode Nerd Font', 'DroidSansMono Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
-  "vsicons.dontShowNewVersionMessage": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "gitlens.historyExplorer.enabled": true,
-  "powermode.enabled": true,
-  "powermode.enableShake": false,
-  "liveshare.audio.startCallOnShare": true,
-  "workbench.activityBar.visible": true,
-  "window.zoomLevel": 0,
-  "gitlens.views.fileHistory.enabled": true,
-  "gitlens.views.lineHistory.enabled": true,
-  "window.titleBarStyle": "native",
-  "editor.fontFamily": "'FuraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.formatOnPaste": true,
-  "editor.fontLigatures": true,
-  "workbench.colorTheme": "Monokai",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "editor.tabSize": 2,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "gitlens.keymap": "alternate",
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true,
+    "suppressResultsExplorerNotice": true,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressWelcomeNotice": true
+  },
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "editor.fontFamily": "'FuraCode Nerd Font', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.formatOnPaste": true,
+  "editor.fontLigatures": true,
   "editor.formatOnSave": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.minimap.enabled": false,
   "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "terraform.indexing": {
     "enabled": true,
     "liveIndexing": false,
@@ -48,5 +35,12 @@
   "terraform.languageServer": {
     "enabled": false,
     "args": []
-  }
+  },
+  "terminal.integrated.fontFamily": "'FuraCode Nerd Font', 'DroidSansMono Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
+  "workbench.activityBar.visible": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 0,
+  "window.titleBarStyle": "native",
+  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}",
+  "workbench.colorTheme": "Monokai"
 }
