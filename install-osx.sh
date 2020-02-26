@@ -4,7 +4,6 @@
 
 brew update
 
-brew install dotnet
 brew install ruby
 brew install python
 brew install gnupg2
@@ -12,6 +11,7 @@ brew install shellcheck
 brew install terraform
 
 brew cask install brave-browser
+brew cask install dotnet-sdk
 brew cask install visual-studio-code
 brew cask install spotify
 brew cask install jetbrains-toolbox
