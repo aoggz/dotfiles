@@ -6,9 +6,14 @@
 !.gitconfig
 
 !.hyper.js
-!.zshrc
+!.zshrc-linux
+!.zshrc-osx
 !.config/Code/User/settings.json
 !.config/fontconfig/conf.d
 !.config/redshift.conf
 
 !install.sh
+!install-osx.sh
+
+!redshift.conf
+!vscode-settings.json

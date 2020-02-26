@@ -47,9 +47,9 @@ ln -s ~/repos/dotfiles/.hyper.js ~/.hyper.js
 ln -s ~/repos/dotfiles/.config/fontconfig/conf.d  ~/.config/fontconfig/conf.d
 
 rm -f ~/.zshrc
-ln -s ~/repos/dotfiles/.zshrc
+ln -s ~/repos/dotfiles/.zshrc-linux ~/.zshrc
 
-ln -s ~/repos/dotfiles/.config/redshift.conf  ~/.config/redshift.conf
+ln -s ~/repos/dotfiles/redshift.conf  ~/.config/redshift.conf
 
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 
