@@ -4,18 +4,20 @@
 
 brew update
 
-brew install ruby
-brew install python
+brew install cmake
 brew install gnupg2
+brew install llvm
+brew install python
+brew install ruby
 brew install shellcheck
 brew install terraform
 
 brew cask install brave-browser
 brew cask install dotnet-sdk
-brew cask install visual-studio-code
-brew cask install spotify
-brew cask install jetbrains-toolbox
 brew cask install iterm2
+brew cask install jetbrains-toolbox
+brew cask install spotify
+brew cask install visual-studio-code
 
 pip3 install --upgrade --user awscli
 pip3 install --upgrade --user runway
