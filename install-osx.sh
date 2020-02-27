@@ -82,8 +82,8 @@ code --install-extension mauve.terraform
 code --install-extension ms-mssql.mssql
 code --install-extension coenraads.bracket-pair-colorizer-2
 
-rm ~/.config/Code/User/settings.json
-ln -s ~/repos/dotfiles/vscode-settings.json ~/.config/Code/User/settings.json
+rm ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/repos/dotfiles/vscode-settings.json ~/Library/Application\ Support/Code/User/settings.json
 
 # # Install docker - https://docs.docker.com/install/linux/docker-ce/ubuntu/
 # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -

@@ -30,7 +30,10 @@
     "enabled": true,
     "liveIndexing": false,
     "delay": 500,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
   },
   "terraform.languageServer": {
     "enabled": false,
