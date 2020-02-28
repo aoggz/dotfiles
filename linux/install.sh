@@ -47,7 +47,7 @@ ln -s ~/repos/dotfiles/.hyper.js ~/.hyper.js
 ln -s ~/repos/dotfiles/.config/fontconfig/conf.d  ~/.config/fontconfig/conf.d
 
 rm -f ~/.zshrc
-ln -s ~/repos/dotfiles/.zshrc-linux ~/.zshrc
+ln -s ~/repos/dotfiles/linux/.zshrc ~/.zshrc
 
 ln -s ~/repos/dotfiles/redshift.conf  ~/.config/redshift.conf
 

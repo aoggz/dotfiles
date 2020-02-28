@@ -55,7 +55,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 # Use .zshrc file from this repository
 rm -f ~/.zshrc
-ln -s ~/repos/dotfiles/.zshrc-osx ~/.zshrc
+ln -s ~/repos/dotfiles/osx/.zshrc ~/.zshrc
 
 # git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 

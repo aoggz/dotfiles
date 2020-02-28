@@ -1,8 +1,9 @@
 
 
 path=$PATH
-path="$path:/usr/local/opt/ruby/bin"
 path="$path:/usr/local/go/bin"
+path="$path:/usr/local/opt/ruby/bin"
+path="$path:/usr/local/opt/llvm/bin"
 path="$path:$HOME/.dotnet"
 path="$path:$HOME/.local/bin"
 path="$path:$HOME/go/bin"
