@@ -1,0 +1,19 @@
+# dotfiles/osx
+
+This directory contains the install process for Mac OS. Follow the instructions below to properly configure Mac OS.
+
+## Installation
+
+1. Install nerd-fonts:
+   1. Download the below fonts (click the Download button on the pages):
+      - [Fira Code Regular Nerd Font Complete.ttf](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf)
+      - [Fira Code Regular Nerd Font Complete Mono.ttf](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete%20Mono.ttf)
+      - [Droid Sans Mono Nerd Font Complete.otf](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf)
+      - [Droid Sans Mono Nerd Font Complete Mono.otf](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete%20Mono.otf)
+   1. Double click each to install
+1. Setup SSH keys
+1. Setup default AWS profile
+1. Clone this repository to the `~/repos/dotfiles` directory
+1. Run `./osx/install.sh`.
+1. Add any private nuget feeds to `~\.nuget\NuGet\NuGet.Config` file.
+1. Add any private npm feeds to `~\.npmrc` file.
