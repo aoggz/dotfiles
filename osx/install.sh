@@ -103,13 +103,11 @@ ln -s ~/repos/dotfiles/vscode-settings.json ~/Library/Application\ Support/Code/
 # sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
 # sudo chmod g+rwx "$HOME/.docker" -R
 
-# Install docker-compose
-sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-sudo curl -L https://raw.githubusercontent.com/docker/compose/1.23.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+# # Install docker-compose
+# sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# sudo chmod +x /usr/local/bin/docker-compose
+# sudo curl -L https://raw.githubusercontent.com/docker/compose/1.23.2/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
 
 # # Increase watchers available for IDEs
 # sudo echo "fs.inotify.max_user_watches = 524288" > /etc/sysctl.d/ide.conf
 # sudo sysctl -p --system 
-
-./dotnet-install.sh
