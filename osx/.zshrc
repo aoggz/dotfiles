@@ -72,7 +72,8 @@ alias ruby='/usr/local/Cellar/ruby/2.7.0/bin'
 
 export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
 export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
-export AWS_DEFAULT_REGION=`aws configure get default.region`
+export AWS_DEFAULT_REGION=`aws configure get default.region` 
+export AWS_REGION=$AWS_DEFAULT_REGION
 
 packer() {
   docker run --rm -it \
@@ -94,9 +95,9 @@ gitversion() {
 }
 # fpath=($fpath "/home/aogburn/.zfunctions")
 
-#   # Set Spaceship ZSH as a prompt
-#   autoload -U promptinit; promptinit
-#   prompt spaceship
+# Set Spaceship ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt spaceship
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook

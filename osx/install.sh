@@ -4,16 +4,11 @@
 
 brew update
 
-brew install cmake
-brew install gnupg2
-brew install llvm
 brew install python
-brew install ruby
 brew install shellcheck
 brew install terraform
 
 brew cask install brave-browser
-brew cask install dotnet-sdk
 brew cask install iterm2
 brew cask install jetbrains-toolbox
 brew cask install spotify
@@ -22,9 +17,16 @@ brew cask install visual-studio-code
 pip3 install --upgrade --user awscli
 pip3 install --upgrade --user runway
 
+# Install dotnet
+curl -L https://dot.net/v1/dotnet-install.sh -o dotnet-install.sh
+chmod +x dotnet-install.sh
+./dotnet-install.sh --channel 3.0
+./dotnet-install.sh --channel 2.2
+./dotnet-install.sh --channel 2.0
+rm dotnet-install.sh
+
 # Install RVM & more up-to-date ruby version 
 gpg --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # Install nvm
