@@ -15,5 +15,7 @@ This directory contains the install process for Mac OS. Follow the instructions 
 1. Setup default AWS profile
 1. Clone this repository to the `~/repos/dotfiles` directory
 1. Run `./osx/install.sh`.
-1. Add any private nuget feeds to `~\.nuget\NuGet\NuGet.Config` file.
-1. Add any private npm feeds to `~\.npmrc` file.
+1. Close your terminal instance and open a new one. Navigate back to the `~/repos/dotfiles` directory.
+1. Run `./osx/post-install.sh`.
+1. Add any private nuget feeds to the `~\.nuget\NuGet\NuGet.Config` file.
+1. Add any private npm feeds to the `~\.npmrc` file.

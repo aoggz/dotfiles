@@ -17,5 +17,5 @@
 1. [Optional] Run `nvm install --lts` to install the latest LTS version of node.
 1. [Optional] Run `nvm install-latest-npm` to update npm to the latest for the current node.js version.
 1. System Settings --> Appearance --> Behavior --> Auto hide launcher. Increase show sensitivity.
-1. Add any private nuget feeds to `~\.nuget\NuGet\NuGet.Config` file.
-1. Add any private npm feeds to `~\.npmrc` file.
+1. Add any private nuget feeds to the `~\.nuget\NuGet\NuGet.Config` file.
+1. Add any private npm feeds to the `~\.npmrc` file.

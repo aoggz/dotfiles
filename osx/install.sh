@@ -30,8 +30,6 @@ curl -sSL https://get.rvm.io | bash -s stable --ruby
 # Install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 
-nvm install 12.13.1
-
 # sudo apt install \
 #   powerline \
 #   fonts-powerline \
@@ -61,8 +59,6 @@ ln -s ~/repos/dotfiles/osx/.zshrc ~/.zshrc
 
 git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-sudo gem install colorls
 
 # pip3 install --user --upgrade powerline-status
 
