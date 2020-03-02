@@ -4,6 +4,7 @@ This directory contains the install process for Mac OS. Follow the instructions 
 
 ## Installation
 
+1. Make sure Homebrew is not installed. If it is, run this script: `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"`.
 1. Install nerd-fonts:
    1. Download the below fonts (click the Download button on the pages):
       - [Fira Code Regular Nerd Font Complete.ttf](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/FiraCode/Regular/complete/Fira%20Code%20Regular%20Nerd%20Font%20Complete.ttf)
@@ -14,8 +15,7 @@ This directory contains the install process for Mac OS. Follow the instructions 
 1. Setup SSH keys
 1. Setup default AWS profile
 1. Clone this repository to the `~/repos/dotfiles` directory
-1. Run `./osx/install.sh`.
-1. Close your terminal instance and open a new one. Navigate back to the `~/repos/dotfiles` directory.
-1. Run `./osx/post-install.sh`.
+1. Run all `./osx/install-x.sh` scripts.
+1. Between each, close your terminal instance and open a new one. Navigate back to the `~/repos/dotfiles` directory and run the next script.
 1. Add any private nuget feeds to the `~\.nuget\NuGet\NuGet.Config` file.
 1. Add any private npm feeds to the `~\.npmrc` file.

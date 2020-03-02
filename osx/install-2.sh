@@ -1,7 +1,4 @@
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
 brew update
 
 brew install python
@@ -13,6 +10,9 @@ brew cask install iterm2
 brew cask install jetbrains-toolbox
 brew cask install spotify
 brew cask install visual-studio-code
+
+brew cask install rectangle
+defaults write com.knollsoft.Rectangle alternateDefaultShortcuts -bool true
 
 pip3 install --upgrade --user awscli
 pip3 install --upgrade --user runway
