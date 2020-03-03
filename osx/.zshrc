@@ -93,11 +93,6 @@ gitversion() {
     -v "${PWD}:/repo" \
     gittools/gitversion:5.0.0-linux-netcoreapp2.1 /repo "$@"
 }
-# fpath=($fpath "/home/aogburn/.zfunctions")
-
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
 
 # place this after nvm initialization!
 autoload -U add-zsh-hook

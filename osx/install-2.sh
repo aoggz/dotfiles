@@ -8,11 +8,9 @@ brew install terraform
 brew cask install brave-browser
 brew cask install iterm2
 brew cask install jetbrains-toolbox
+brew cask install rectangle
 brew cask install spotify
 brew cask install visual-studio-code
-
-brew cask install rectangle
-defaults write com.knollsoft.Rectangle alternateDefaultShortcuts -bool true
 
 pip3 install --upgrade --user awscli
 pip3 install --upgrade --user runway
@@ -46,26 +44,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
 #   python3-tk \
 #   python3-keyring
 
-# Configure terminal
-chsh -s /bin/zsh
+# Configure rectangle
+defaults write com.knollsoft.Rectangle alternateDefaultShortcuts -bool true
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# ln -s ~/repos/dotfiles/.config/fontconfig/conf.d  ~/.config/fontconfig/conf.d
-
-# Use .zshrc file from this repository
-rm -f ~/.zshrc
-ln -s ~/repos/dotfiles/osx/.zshrc ~/.zshrc
-
-# git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-# pip3 install --user --upgrade powerline-status
-
-# VS Code configuration
-
+# Configure VS Code
+echo '-----'
+vared -p 'Make sure you can open VS Code before continuing... (press Enter to continue)' -c tmp
+echo '-----'
 code --install-extension ms-vscode.csharp
 code --install-extension peterjausovec.vscode-docker
 code --install-extension eamodio.gitlens
@@ -80,10 +65,11 @@ code --install-extension mauve.terraform
 code --install-extension ms-mssql.mssql
 code --install-extension coenraads.bracket-pair-colorizer-2
 
-rm ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/repos/dotfiles/vscode-settings.json ~/Library/Application\ Support/Code/User/settings.json
+rm $HOME/Library/Application\ Support/Code/User/settings.json
+ln -s $PWD/vscode-settings.json $HOME/Library/Application\ Support/Code/User/settings.json
 
-# # Install docker - https://docs.docker.com/install/linux/docker-ce/ubuntu/
+# # Install docker
+# # https://docs.docker.com/install/linux/docker-ce/ubuntu/
 # curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 # sudo apt-key fingerprint 0EBFCD88
 # sudo add-apt-repository \
