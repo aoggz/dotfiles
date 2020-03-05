@@ -28,13 +28,16 @@
   "explorer.confirmDragAndDrop": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "terraform.indexing": {
-    "enabled": true,
+    "enabled": false,
     "liveIndexing": false,
     "delay": 500,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
   },
   "terraform.languageServer": {
-    "enabled": false,
+    "enabled": true,
     "args": []
   },
   "terminal.integrated.fontFamily": "'FuraCode Nerd Font', 'DroidSansMono Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
