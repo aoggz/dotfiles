@@ -8,6 +8,7 @@ brew install terraform
 brew cask install brave-browser
 brew cask install iterm2
 brew cask install jetbrains-toolbox
+brew cask install postman
 brew cask install rectangle
 brew cask install spotify
 brew cask install visual-studio-code
