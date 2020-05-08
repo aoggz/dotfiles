@@ -1,8 +1,4 @@
 
-nvm install 12.13.1
-
-sudo gem install colorls
-
 # Set Zsh as default shell
 chsh -s /bin/zsh
 
