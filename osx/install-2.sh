@@ -13,7 +13,6 @@ brew cask install rectangle
 brew cask install spotify
 brew cask install visual-studio-code
 
-pip3 install --upgrade --user awscli
 pip3 install --upgrade --user runway
 
 # Install dotnet
@@ -29,7 +28,11 @@ gpg --keyserver hkp://ipv4.pool.sks-keyservers.net --recv-keys 409B6B1796C275462
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 
 # Install nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
+# Install AWS CLI
+curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+sudo installer -pkg AWSCLIV2.pkg -target /
 
 # sudo apt install \
 #   powerline \
