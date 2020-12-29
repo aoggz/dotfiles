@@ -31,14 +31,11 @@
     "enabled": false,
     "liveIndexing": false,
     "delay": 500,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ]
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
   },
   "terraform.languageServer": {
-    "enabled": true,
-    "args": []
+    "external": true,
+    "args": ["serve"]
   },
   "terminal.integrated.fontFamily": "'FuraCode Nerd Font', 'DroidSansMono Nerd Font', Menlo, 'DejaVu Sans Mono', Consolas, 'Lucida Console', monospace",
   "workbench.activityBar.visible": true,
@@ -52,5 +49,17 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.multiCursorModifier": "alt",
+  "gitlens.gitCommands.closeOnFocusOut": true,
+  "terminal.integrated.scrollback": 10000,
+  "workbench.tree.indent": 20,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "editor.detectIndentation": false
 }
