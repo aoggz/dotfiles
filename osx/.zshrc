@@ -55,13 +55,6 @@ alias ruby='/usr/local/Cellar/ruby/2.7.0/bin'
 # POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=$'\uf0ab '
 # POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=$'\uf0aa '
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/sls.zsh ]] && . /home/aogburn/repos/hot-metal/node_modules/tabtab/.completions/sls.zsh
-
 # aws() {
 #   docker run --rm -it \
 #     --name aws \
@@ -70,8 +63,8 @@ alias ruby='/usr/local/Cellar/ruby/2.7.0/bin'
 #     jess/awscli "$@"
 # }
 
-export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
-export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
+# export AWS_ACCESS_KEY_ID=`aws configure get default.aws_access_key_id`
+# export AWS_SECRET_ACCESS_KEY=`aws configure get default.aws_secret_access_key` 
 export AWS_DEFAULT_REGION=`aws configure get default.region` 
 export AWS_REGION=$AWS_DEFAULT_REGION
 
@@ -92,6 +85,48 @@ gitversion() {
     --log-driver none \
     -v "${PWD}:/repo" \
     gittools/gitversion:5.0.0-linux-netcoreapp2.1 /repo "$@"
+}
+
+# runway() {
+#   docker run --rm -it \
+#     --log-driver none \
+#     -v "${HOME}/.aws:/root/.aws" \
+#     -v "/var/run/docker.sock:/var/run/docker.sock" \
+#     -v "${PWD}:/app" \
+#     -w /app \
+#     -e AWS_ACCESS_KEY_ID \
+#     -e AWS_SECRET_ACCESS_KEY \
+#     -e AWS_SESSION_TOKEN \
+#     -e DEPLOY_ENVIRONMENT \
+#     registry.gitlab.zoll-lifevest.com/docker/runway-plus runway "$@"
+# }
+
+# terraform() {
+#   docker run --rm -it \
+#     --name terraform \
+#     --log-driver none \
+#     -e AWS_ACCESS_KEY_ID \
+#     -e AWS_SECRET_ACCESS_KEY \
+#     -e AWS_SESSION_TOKEN \
+#     -v "${HOME}/.aws:/root/.aws" \
+#     -v "${PWD}:/app" \
+#     -w /app \
+#     hashicorp/terraform "$@"
+# }
+
+gitlab-terraform() {
+  docker run --rm -it \
+    --log-driver none \
+    -e AWS_ACCESS_KEY_ID \
+    -e AWS_SECRET_ACCESS_KEY \
+    -e AWS_SESSION_TOKEN \
+    -e TF_ADDRESS \
+    -e TF_USERNAME \
+    -e TF_PASSWORD \
+    -v "${HOME}/.aws:/root/.aws" \
+    -v "${PWD}:/app" \
+    -w /app \
+    registry.gitlab.com/gitlab-org/terraform-images/stable:latest gitlab-terraform "$@"
 }
 
 # place this after nvm initialization!
